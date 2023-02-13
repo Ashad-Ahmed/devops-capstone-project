@@ -3,7 +3,7 @@ Account Service.
 
 This microservice handles the lifecycle of Accounts
 """
-# pylint: disable=unused-import 
+# pylint: disable=unused-import
 from flask import jsonify, request, make_response, abort, url_for   # noqa; F401
 from service.models import Account
 from service.common import status  # HTTP Status Codes
@@ -147,3 +147,4 @@ def check_content_type(media_type):
         status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
         f"Content-Type must be {media_type}",
     )
+    
